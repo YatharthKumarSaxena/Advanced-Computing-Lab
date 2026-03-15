@@ -6,7 +6,7 @@
 
 using namespace std;
 
-// --- 1. DATA STRUCTURES ---
+// 1. DATA STRUCTURES
 
 struct Point {
     double x, y;
@@ -20,7 +20,7 @@ struct HullStep {
 // Global reference point for sorting
 Point p0;
 
-// --- 2. MATH & GEOMETRY FUNCTIONS ---
+// 2. MATH & GEOMETRY FUNCTIONS
 
 inline double distSq(Point p1, Point p2) {
     return (p1.x - p2.x)*(p1.x - p2.x) + (p1.y - p2.y)*(p1.y - p2.y);
@@ -42,7 +42,7 @@ inline bool comparePoints(Point p1, Point p2) {
     return (o == 1);
 }
 
-// --- 3. GRAHAM SCAN ALGORITHM (CLRS Logic) ---
+// 3. GRAHAM SCAN ALGORITHM (CLRS Logic)
 
 vector<HullStep> getConvexHullHistory(vector<Point> points) {
     vector<HullStep> history;
@@ -114,7 +114,7 @@ vector<HullStep> getConvexHullHistory(vector<Point> points) {
     return history;
 }
 
-// --- 4. GUI AND MAIN FUNCTION ---
+// 4. GUI AND MAIN FUNCTION
 
 void drawPoints(sf::RenderWindow& window, const vector<Point>& points) {
     for (size_t i = 0; i < points.size(); ++i) {
@@ -158,7 +158,7 @@ int main() {
 
     float screenWidth = desktop.width;
 
-    // --- UI Setup ---
+    // UI Setup
     sf::RectangleShape runBtn(sf::Vector2f(120, 40)); runBtn.setPosition(screenWidth - 140, 20); runBtn.setFillColor(sf::Color(50, 150, 50)); 
     sf::RectangleShape animBtn(sf::Vector2f(120, 40)); animBtn.setPosition(screenWidth - 140, 70); animBtn.setFillColor(sf::Color(50, 50, 150)); 
     sf::RectangleShape stopBtn(sf::Vector2f(120, 40)); stopBtn.setPosition(screenWidth - 140, 120); stopBtn.setFillColor(sf::Color(200, 100, 0)); 
