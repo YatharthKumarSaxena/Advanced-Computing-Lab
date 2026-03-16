@@ -36,14 +36,27 @@ echo "------------------------------------------------"
 # 5. Find direct files, sort them, copy them, and print to the log
 find "$SRC_DIR" -maxdepth 1 -type f -exec basename {} \; | sort $SORT_FLAG | while IFS= read -r file; do
     
-    # Copy the file to the destination
-    cp "$SRC_DIR/$file" "$DEST_DIR/"
-    
     # Generate the current timestamp
     TIMESTAMP=$(date +"%Y-%m-%d %H:%M:%S")
+    # Generate a filename-safe version (replacing spaces/colons with dashes or underscores)
+    FILE_TS=$(date +"%Y-%m-%d_%H-%M-%S")
+
+    # Split filename and extension
+    FILENAME="${file%.*}"
+    EXTENSION="${file##*.}"
+
+    # Handle files without extensions
+    if [ "$FILENAME" = "$EXTENSION" ]; then
+        NEW_NAME="${FILENAME}_${FILE_TS}"
+    else
+        NEW_NAME="${FILENAME}_${FILE_TS}.${EXTENSION}"
+    fi
+    
+    # Copy the file to the destination with the new name
+    cp "$SRC_DIR/$file" "$DEST_DIR/$NEW_NAME"
     
     # Print the log output
-    echo "[$TIMESTAMP] Copied: $file"
+    echo "[$TIMESTAMP] Copied: $file -> $NEW_NAME"
     
 done
 
