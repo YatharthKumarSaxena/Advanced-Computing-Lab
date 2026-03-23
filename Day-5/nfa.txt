@@ -1,7 +1,7 @@
-A,B,C
-0,1
-A
-C
+states=A,B,C
+symbols=0,1
+initialState=A
+finalStates=C,D
 A,0,A,B
 A,1,A
 B,1,C
