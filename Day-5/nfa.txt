@@ -1,9 +1,8 @@
-states=A,B,C
-symbols=0,1
+states=A,B,C,D
+symbols=0
 initialState=A
-finalStates=C,D
-A,0,A,B
-A,1,A
-B,1,C
-C,0,C
-C,1,C
+finalStates=A
+A,0,B,D
+B,0,C
+C,0,A
+D,0,A

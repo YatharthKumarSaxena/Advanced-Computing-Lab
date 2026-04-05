@@ -111,12 +111,12 @@ public class NFASimulator {
                     for (int i = 0; i < parts.length; i++)
                         finalStates[i] = parts[i].trim().charAt(0);
                 } else {
-                    // Agar koi label nahi hai, toh ise transition line maano
+                    // If no label, consider it a transition line
                     transitionLines.add(line);
                 }
             }
 
-            // Transitions array initialize karein (Metadata load hone ke baad)
+            // Transitions array initialize (After Metadata load)
             transitions = new char[states.length][symbols.length][];
 
             for (String tl : transitionLines) {
