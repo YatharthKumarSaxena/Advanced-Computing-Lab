@@ -1,0 +1,9 @@
+Name,FatherName,Enrollment,Faculty,Residence,Course,Year,Phone,Email,Gender,Branch,CGPA
+Rahul Sharma,Ramesh Sharma,GM0864,23COBEA213,Hosteller,BTech,3rd,9876543210,rahul@gmail.com,Male,CSE,8.5
+Priya Singh,Vijay Singh,GM0777,23COBEA111,Hosteller,MTech,1st,8888888888,priya@gmail.com,Female,CSE,9.1
+Amit Sharma,Suresh Verma,GM0666,23COBEA333,DayScholar,PhD,1st,7777777777,amit@gmail.com,Male,ECE,8.8
+Sneha Gupta,Anil Gupta,GM0555,23COBEA777,Hosteller,BTech,4th,6666666666,sneha@gmail.com,Female,ME,8.2
+Siddhant Tiwari,Rakesh Tiwari,GM0999,23COBEA500,DayScholar,BTech,2nd,9999999999,siddhant@gmail.com,Male,IT,7.9
+Karan Patel,Dilip Patel,GM0123,23COBEA199,Hosteller,BTech,3rd,9123456780,karan@gmail.com,Male,CSE,6.8
+Neha Reddy,Prakash Reddy,GM0456,23COBEA205,DayScholar,MCA,2nd,9876123450,neha@gmail.com,Female,IT,8.9
+Aman Khan,Zahir Khan,GM0789,23COBEA401,Hosteller,BTech,1st,9988776655,aman@gmail.com,Male,Civil,7.2
