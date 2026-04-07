@@ -3,7 +3,7 @@ import java.io.*;
 import java.net.*;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.Scanner; // Yahan Scanner import kiya hai
+import java.util.Scanner; 
 
 public class Server {
     static int clientCounter = 0;
@@ -30,7 +30,6 @@ public class Server {
 
     public static void main(String[] args) {
         try {
-            // SERVER BOOT CONFIGURATION (User Input)
             Scanner sc = new Scanner(System.in);
             System.out.println("=========================================");
             System.out.println("       SERVER CONFIGURATION SETUP        ");
@@ -49,7 +48,7 @@ public class Server {
             int total = countRecords();
             System.out.println("[" + time() + "] CSV Loaded. Records = " + total);
 
-            ServerSocket ss = new ServerSocket(5000);
+            ServerSocket ss = new ServerSocket(10000);
             System.out.println("[" + time() + "] SERVER STARTED on PORT 5000");
             System.out.println("[" + time() + "] Waiting for client...");
 
