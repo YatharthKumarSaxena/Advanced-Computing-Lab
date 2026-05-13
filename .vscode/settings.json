@@ -1,0 +1,8 @@
+{
+    "editor.quickSuggestions": false,
+    "editor.suggestOnTriggerCharacters": false,
+
+    "github.copilot.enable": {
+        "*": false
+    }
+}
